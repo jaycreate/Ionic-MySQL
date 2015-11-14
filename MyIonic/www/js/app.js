@@ -23,7 +23,7 @@ angular.module('MyIonic',
 })
 
 .constant('SERVER', {
-    //url: 'http://smilefriday.com/ionic/topic'
+    //url: 'http://your-server-url/ionic/topic'
     url: 'api'
 })
 
