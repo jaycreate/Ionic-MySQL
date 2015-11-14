@@ -1,0 +1,11 @@
+{
+  "name": "MyIonic",
+  "app_id": "",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://your-server-url/ionic/topic"
+    }
+  ]
+}
+

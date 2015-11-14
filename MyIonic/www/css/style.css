@@ -1,0 +1,18 @@
+h2.topic-title{
+	white-space: normal;
+	height: 3.6em;
+	/*font-size: 18.6px;*/
+    color: #267091;
+}
+
+.wrap{
+	white-space: wrap;
+}
+
+.nl2br, .pre{
+	white-space: pre;
+}
+
+.popup-head {
+  /*background-color : #cccccc;*/
+}

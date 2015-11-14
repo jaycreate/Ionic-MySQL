@@ -1,0 +1,36 @@
+<ion-view view-title="List View">
+
+<ion-nav-buttons side="right">
+    <a class="button button-clear" href="#/tab/newtopic"><span class="icon ion-compose"></span></a>
+  </ion-nav-buttons>
+
+<ion-content>
+	<ion-item class="item-divider">
+		<p>List View</p>
+	</ion-item>
+
+	<ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="doRefresh()">
+    </ion-refresher>
+
+
+	<div class="list">
+
+	    <a class="item item-thumbnail-left item-icon-right" ng-repeat="topic in topics track by topic.id" 
+	    	href="#/tab/detail/{{topic.id}}">
+	      <img src="img/no-photo.jpg" ng-if="!topic.picture">
+	      <img src="http://smilefriday.com/ionic/upload/{{topic.picture}}" ng-if="topic.picture">
+
+	      <h2 class="topic-title">{{topic.title}}</h2>
+	      <p class="ion-ios-clock-outline">  <span am-time-ago="topic.posted" ></span> by {{topic.name}}</p>
+          <i class="icon ion-chevron-right icon-accessory"></i>
+	    </a>
+
+	</div>
+
+	<ion-infinite-scroll on-infinite="loadMore()" distance="1%">
+	</ion-infinite-scroll>
+
+</ion-content>
+</ion-view>

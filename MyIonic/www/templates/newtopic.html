@@ -1,0 +1,39 @@
+<ion-view view-title="New Topic">
+<ion-content>
+	
+ <div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Title</span>
+    <input type="text" ng-model="topic.title" placeholder="Enter your topic title">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Message</span>
+    <textarea rows="3" required
+          placeholder="Enter your message" ng-model="topic.message"></textarea>
+  </label>
+
+
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Your name</span>
+    <input type="text" ng-model="topic.name" placeholder="Enter your name">
+  </label>
+
+  <div class="item">
+    <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}">
+    <img ng-show="imgURI === undefined" ng-src="http://placehold.it/180x180">
+    <p>
+    <button class="button icon ion-camera" ng-click="takePicture(1)"></button>
+    <button class="button icon ion-images" ng-click="takePicture(2)"></button>  
+    </p>
+  </div>
+</div>
+
+<div class="">
+        <button class="button button-assertive button-full" ng-click="post(topic)">
+          Post your topic now <i class="icon ion-paper-airplane"></i>
+        </button>
+    </div>
+
+
+</ion-content>
+</ion-view>

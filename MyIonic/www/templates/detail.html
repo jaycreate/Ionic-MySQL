@@ -1,0 +1,38 @@
+<ion-view view-title="Detail">
+<ion-content>
+
+<div class="list">
+
+  <div class="item">
+    <h2>{{topic.title}}</h2>
+    <p class="ion-ios-clock-outline">  <span am-time-ago="topic.posted" ></span> by {{topic.name}}</p>
+  </div>
+
+  <div class="item item-body">
+    <img class="full-image" src="http://smilefriday.com/ionic/upload/{{topic.picture}}" ng-if="topic.picture">
+    <p>{{topic.message}}</p>
+    <p>
+      <a href="#" class="subdued">1 Like</a>
+      <a href="#" class="subdued">5 Comments</a>
+    </p>
+  </div>
+
+  <div class="item tabs tabs-secondary tabs-icon-left">
+    <a class="tab-item" href="#">
+      <i class="icon ion-thumbsup"></i>
+      Like
+    </a>
+    <a class="tab-item" href="#">
+      <i class="icon ion-chatbox"></i>
+      Comment
+    </a>
+    <a class="tab-item" href="#">
+      <i class="icon ion-share"></i>
+      Share
+    </a>
+  </div>
+
+</div>
+
+</ion-content>
+</ion-view>
